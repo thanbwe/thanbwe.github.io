@@ -26,8 +26,38 @@
     
     <!-- index ကို ကြည့်တာ ကျန်တာ ဝင်ကြည့်မရတာ -->
     <meta name="robots" content="index, nofollow">
+
+    <!-- html file အတွင်းမှာ ရေးရတာကို internal -->
+    <!-- internal CSS -->
+    <style>
+        /* selector {
+            property: value;
+        } */
+        /* For css color h1 */
+        h1 {
+            color: red;
+        }
+        /* For css color h3 with class */
+        .tag-line {
+            color: white;
+            background-color: black;
+        }
+        /* For css color h3 with id */
+        #welcome {
+            color: brown;
+            background-color: aqua;
+        }
+    </style>
+
+<!-- html file အပြင်ပြင်မှာ ရေးရတာကို External -->
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <h1>HeinLearn</h1>
+    <h3 class="tag-line">learn Everwhere.</h3>
+    <h3 id="welcome">Welcome to heinLearn.</h3>
+
+    <p>Start Web development with to Bacth-4</p>
 </body>
 </html>
