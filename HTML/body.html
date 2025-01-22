@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>body html</title>
+    <title>body tag</title>
+    <style>
+        .block {
+            background-color: red;
+        }
+        .inline {
+            background-color: green;
+        }
+    </style>
 </head>
 <body>
     <!-- p - paragraph - စာပိုဒ်အတွက်သုံးတာ -->
@@ -49,5 +57,60 @@
     <h4>You are CSS in my HTML.</h4>
     <h5>You are CSS in my HTML.</h5>
     <h6>You are CSS in my HTML.</h6>
+
+    <!-- block elements and inline elements -->
+    <!-- Block Elements - အကြောင်းအရာ အပြည့် နေရာယူတာ -->
+    <p class="block">Hello</p> <p class="block">World</p>
+
+    <!-- Inline Elements - အကြောင်းအရာလေးပဲ နေရာယူတာ-->
+    <span class="inline">Hi</span>
+    <span class="inline">I am Than.</span>
+
+    <p>Lorem ipsum dolor sit <span>HTML</span> amet consectetur adipisicing elit. Excepturi aperiam velit nam quibusdam iure quasi cupiditate adipisci repellat? Dolores veniam corrupti quaerat ea temporibus laborum nisi voluptatem magnam fugiat sint totam quae voluptatum dicta illo delectus possimus quo iure explicabo unde beatae reiciendis, provident ipsam. Odio dolorem praesentium molestias sunt maxime tempora, blanditiis voluptatibus illo commodi, saepe, at cumque numquam ipsum iste aperiam unde obcaecati eveniet. Dolorem esse veniam repellat numquam in saepe quas aperiam iusto, quaerat debitis, necessitatibus dolore amet incidunt nihil veritatis cum error omnis. At veritatis molestias enim quisquam perferendis, suscipit dolor, iste modi ullam aut quasi!</p>
+
+    <p>Lorem ipsum dolor sit amet <div>HTML</div> consectetur adipisicing elit. Voluptatibus, ipsa cupiditate quidem officia culpa dicta veniam tempore fugiat magnam qui expedita unde aspernatur molestias exercitationem. Quidem, soluta incidunt! Beatae, eum.</p>
+
+    <!-- List -->
+    <!-- Ordered List
+     type -> 1, A, a, i, I
+     start -> number
+     -->
+    <ol type="a" start="15">
+        <li>ICS</li>
+        <li>Git and Github</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>CSS Project</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <!-- Undered List
+    type -> dics, circle, square 
+    -->
+    <ul type="square">
+        <li>Apple</li>
+        <li>Meta</li>
+        <li>Amazone</li>
+        <li>Testla</li>
+        <li>Microsoft</li>
+        <li>Google</li>
+        <li>ByteDance</li>
+    </ul>
+
+    <!-- Defination List -->
+    <dl>
+        <dt>What is Biology.</dt>
+        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo placeat facilis omnis cupiditate modi. Porro temporibus alias modi, quaerat aperiam eligendi quibusdam nam soluta natus! Corporis dignissimos labore praesentium quasi non recusandae incidunt natus assumenda rem, minima neque voluptates nam quas qui doloremque earum sequi repudiandae placeat laborum. Repellat, similique.</dd>
+    </dl>
+
+    <!-- Link -->
+    <a href="intro.html">Intro Lesson</a> <br>
+    <a href="index.html">HTML</a> <br>
+    <a href="head.html">Head Lesson</a> <br>
+    <a href="body.html">Body Lesson</a> <br>
+    <!-- target က new tap သွားတာ -->
+    <a href="https:Google.com" target="_blank">Go to Google</a> <br>
+    <a href="https://youtube.com/@codingnology" target="_blank">Codingnology Youtube Channel</a> <br>
+    <a href="https//facebook.com/heinminhtet8138" target="_blank">Hein Facebook Profile</a> <br>
 </body>
 </html>
