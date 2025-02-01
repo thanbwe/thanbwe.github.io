@@ -18,6 +18,11 @@ h1 {
 /* Id Selector */
 #idOne {
     color: red;
+    line-height: 30px;
+    text-indent: 40px;
+    text-transform: lowercase;
+    word-spacing: 10px;
+    letter-spacing: 5px;
 }
 
 /* Class Selector */
