@@ -1,0 +1,30 @@
+/* မဝင်ခင် အခြေအနေ */
+a:link {
+    color: red;
+}
+
+/* ေမာက်တင်ထား  အခြေအနေ */
+a:hover {
+    color: green;
+}
+
+/* ဝင်ပီး အခြေအနေ */
+a:visited {
+    color: blue;
+}
+
+/* နှိပ်နေတဲ့ချိန် အခြေအနေ */
+a:active {
+    color: yellow;
+}
+
+/* target */
+:target {
+    color: red;
+    border: 1px solid black;
+}
+/* target hover */
+:target:hover {
+    color: aqua;
+}
+
