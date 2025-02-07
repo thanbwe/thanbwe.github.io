@@ -1,0 +1,50 @@
+.float-left img {
+    width: 40%;
+    float: left;
+    margin-right: 20px;
+}
+.float-left p, .float-right p{
+    text-align: justify;
+}
+
+.clear {
+    clear: both;
+}
+
+.float-right img{
+    width: 40%;
+    float: right;
+    margin-left: 20px;
+}
+.gridOne div, .gridTwo div, .gridThree div, .gridFour div, .gridFive div, .gridSix div{
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.gridOne, .gridTwo, .gridThree, .gridFour, .gridFive, .gridSix{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.gridTwo {
+    grid-column-gap: 30px;
+}
+
+.gridThree {
+    grid-row-gap: 50px;
+}
+
+.gridFour {
+    grid-gap: 40px;
+}
+.coladd {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.rowadd {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
