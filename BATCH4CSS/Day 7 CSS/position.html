@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: red;
+        }
+
+        .relative_parent, .absolute_parent {
+            border: 2px solid red;
+            width: 1000px;
+            height: 300px;
+        }
+
+        .relative {
+            border: 2px solid green;
+            width: 400px;
+            height: 150px;
+            top: 40px;
+            left: 50px;
+            position: relative;
+
+        }
+
+        .absolute_parent{
+            position: relative;
+        }
+
+        .absolute {
+            border: 2px solid black;
+            width: 500px;
+            height: 200px;
+            top: 50px;
+            right: 40px;
+            position: absolute;
+        }
+
+        .fixed {
+            position: fixed;
+            border: 4px solid black;
+            top: 50px;
+            right: 100px;
+            width: 200px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Position Lesson</h1>
+    <div class="relative_parent">
+        <p class="relative">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, eaque? Temporibus fugit quisquam cupiditate laborum tempora sit dicta voluptatem omnis ipsam! Sequi adipisci deserunt dicta rem eveniet error necessitatibus similique, ut consequuntur optio, qui eius delectus veritatis. Illo, corporis doloribus! Mollitia tenetur excepturi quo quis ipsa temporibus libero vel exercitationem.
+        </p>
+    </div>
+
+    <br>
+
+    <div class="absolute_parent">
+        <p class="absolute">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim a minus numquam totam molestias. Veniam, maiores odio eaque, atque fugit minima accusamus eius perspiciatis amet mollitia temporibus officia praesentium id beatae obcaecati soluta! Rerum quos tempora ad eligendi tenetur vel ipsam quam. Pariatur velit repudiandae non beatae, provident quis laboriosam.
+        </p>
+    </div>
+
+    <br>
+
+    <h2 class="fixed">
+        Position Fixed
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dolore reprehenderit odit! Suscipit distinctio nostrum, aut fuga dolorem magnam recusandae cumque ullam perferendis aspernatur provident doloremque quas. Dolor, ducimus dolorem?</p>
+    </h2>
+</body>
+</html>
