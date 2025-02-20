@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataType</title>
+</head>
+<body>
+    <h1>DataType Lessons</h1>
+    <script>
+        // String Datatype
+
+        let name = "Kyaw Zin Aung";
+        console.log("Name is " + name);
+        console.log("Name Dat Type is " +typeof(name));
+        document.write("Name is " + name);
+        document.write("<br>");
+
+        // Nunber DataType
+        let age = 26;
+        console.log("Age is " + age);
+        console.log("Age Dat Type is " +typeof(age));
+        document.write("Age is " + age);
+        document.write("<br>");
+
+        // Boolen DataType
+        let single = true;
+        console.log("Single is " + single);
+        console.log("Single Dat Type is " +typeof(single));
+        document.write("Single is " + single);
+        document.write("<br>");
+
+        //Undefined 
+        let myBaby;
+        console.log(myBaby);
+
+        //Null
+        let son = null;
+        console.log(son);
+        console.log(typeof(son));
+
+        //array
+        let arr = new Array('a','b','c','d');
+        console.log(arr);
+        console.log(arr[3]);
+
+        let studentList = ['Mg Mg', 'Aung Aung', 'Hla Hla', 'Aye Aye'];
+        console.log(studentList);
+        console.log(studentList[3]);
+
+        let employeeList = ['Mg Mg', 'Aung Aung',['Daw Hla', 'U Mya'], 'Hla Hla', 'Aye Aye'];
+        console.log(employeeList);
+        console.log(employeeList[2][1]);
+
+        // Object 
+        let CarInfo = {
+            carName : 'Honda Fix',
+            color : ['white', 'black'],
+            number : '8M-29340'
+        }
+        console.log(CarInfo.carName);
+        console.log(CarInfo.color[1]);
+
+
+    </script>
+</body>
+</html>
