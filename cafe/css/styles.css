@@ -15,7 +15,6 @@ body {
 .brand {
     display: flex;
     align-items: center;
-    align-items: center;
 }
 .brand img {
     width: 60px;
