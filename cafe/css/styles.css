@@ -192,4 +192,69 @@ body {
     padding: 50px 0;
     text-align: center;
 }
+/* Contact Us */
+.contact-us h1 {
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    margin: 10px 0 50px 0;
+}
+.map {
+    margin: 0 70px 50px 70px;
+}
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.info {
+    display: flex;
+    padding: 20px 0;
+}
+.contact-info {
+    margin: 0 70px;
+}
+.contact-icon {
+    position: relative;
+    background-color: #cda45e;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #1a1814;
+    border-radius: 5px;
+    color: white;
+}
+
+/* footer */
+.footer
+{
+    background-color: black;
+    padding: 50px 0;
+    text-align: center;
+    margin-top: 100px;
+}
+.footer-title {
+    font-weight: bold;
+}
+.dev {
+    color: #cda45e;
+    text-decoration: none;
+    font-weight: bold;
+}
 
