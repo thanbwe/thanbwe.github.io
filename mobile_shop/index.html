@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Home</title>
+    <style>
+        .home {
+            background-image: url('./images/bg.jpg');
+        }
+        .nav-list a.active{
+            border-top: 2px solid rgb(173, 144, 91);
+            border-bottom: 5px solid orange;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1 class="logo">Mobile Shop</h1>
+        <ul class="nav-list">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li class="dropdown">
+                <a href="#">Products &#9662;</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./PRODUCT/iphone.html">Iphone <span>&#9662;</span></a></li>
+                    <li><a href="./PRODUCT/redmi.html">Xaomi</a></li>
+                    <li><a href="./PRODUCT/samsung.html">Samsaung</a></li>
+                    <li><a href="./PRODUCT/asus.html">Asus</a></li>
+                    <li><a href="./PRODUCT/oppo.html">Oppo</a></li>
+                    <li><a href="./PRODUCT/vivo.html">Vivo</a></li>
+                    <li><a href="./PRODUCT/oneplus.html">Oneplus</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="./AUTH/login.html"><i class="fa-solid fa-circle-user"></i></a>
+        </div>
+    </nav>
+
+    <div class="home">
+        <div class="home-text">
+            <h1>May Day Offer <br>Get 20% Discount.</h1>
+            <p>Best Online Business - We provide Leatest. Brand Quality Phones.</p>
+            <a href="">Order Now <i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </div>
+
+    <!-- featred collections -->
+    <div class="feature">
+        <h2>Products</h2>
+        <p>
+            Brand New Collection - Iphone, Samsung, Asus <br>
+            Xaomi, Realme, OnePlus
+        </p>
+        <div class="cart-container">
+            <div class="cart-item">
+                <img src="./images/i-1.png" alt="">
+                <h3>Iphone</h3>
+                <div class="heart-icon">
+                    <input type="checkbox" id="heart">
+                    <label for="heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </label>
+                    <input type="checkbox" id="like">
+                    <label for="like">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                    </label>
+                </div>
+                <h4>$400.00</h4>
+                <h5>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </h5>
+                <h6>
+                    <button class="btn">Add To Cart </button>
+                </h6>
+            </div>
+            <div class="cart-item">
+                <img src="./images/s-2.jpg" alt="">
+                <h3>Sumsaung</h3>
+                <div class="heart-icon">
+                    <input type="checkbox" id="heart">
+                    <label for="heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </label>
+                    <input type="checkbox" id="like">
+                    <label for="like">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                    </label>
+                </div>
+                <h4>$320.00</h4>
+                <h5>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </h5>
+                <h6>
+                    <button class="btn">Add To Cart </button>
+                </h6>
+            </div>
+            <div class="cart-item">
+                <img src="./images/m-1.jpg" alt="">
+                <h3>Xaomi</h3>
+                <div class="heart-icon">
+                    <input type="checkbox" id="heart">
+                    <label for="heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </label>
+                    <input type="checkbox" id="like">
+                    <label for="like">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                    </label>
+                </div>
+                <h4>$210.00</h4>
+                <h5>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </h5>
+                <h6>
+                    <button class="btn">Add To Cart </button>
+                </h6>
+            </div>
+            <div class="cart-item">
+                <img src="./images/a-1.jpg" height="170px" alt="">
+                <h3>Asus</h3>
+                <div class="heart-icon">
+                    <input type="checkbox" id="heart">
+                    <label for="heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </label>
+                    <input type="checkbox" id="like">
+                    <label for="like">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                    </label>
+                </div>
+                <h4>$150.00</h4>
+                <h5>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </h5>
+                <h6>
+                    <button class="btn">Add To Cart </button>
+                </h6>
+            </div>
+            <div class="cart-item">
+                <img src="./images/o-1.png" height="170px" alt="">
+                <h3>OnePlus</h3>
+                <div class="heart-icon">
+                    <input type="checkbox" id="heart">
+                    <label for="heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </label>
+                    <input type="checkbox" id="like">
+                    <label for="like">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                    </label>
+                </div>
+                <h4>$280.00</h4>
+                <h5>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </h5>
+                <h6>
+                    <button class="btn">Add To Cart </button>
+                </h6>
+            </div>
+        </div>
+    </div>
+
+    <!-- Special Offers -->
+    <div class="special">
+        <div class="special-offers">
+            <h2>Special Offers</h2>
+            <p>Some price may not be up to date according to today's latest price. <br>[Site last updated on March 1,
+                2025]</p>
+            <h4>All Phones are 20% off now! <br>Don't miss such a deal!</h4>
+            <table>
+                <tr>
+                    <td>15</td>
+                    <td>21</td>
+                    <td>18</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>Days</td>
+                    <td>Hour</td>
+                    <td>Min</td>
+                    <td>Sec</td>
+                </tr>
+            </table>
+            <button><a href="">Explore More</a></button>
+        </div>
+    </div>
+
+    <!-- popular collections -->
+    <div class="popular-collections">
+        <p>
+            Countrary to popular belief, Lorem Ipsum is not <br>
+            simply random.
+        </p>
+        <div class="popular-nav">
+            <span>
+                <a href="">Old Products</a>
+                <a href="">New Products</a>
+                <a href="">all Products</a>
+            </span>
+        </div>
+        <div class="cart-containers">
+            <div class="cart-items">
+                <img src="./images/s-2.jpg" alt="">
+                <h3 class="cart-title">Samsung S23 Ultra</h3>
+                <h4 class="cart-price">$400.00</h4>
+                <h5 class="card-icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </h5>
+                <div class="add-cart">
+                    <input type="checkbox" name="add-card" id="acart">
+                    <label for="acart">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </label>
+                </div>
+            </div>
+            <div class="cart-items">
+                <img src="./images/m-1.jpg" alt="">
+                <h3 class="cart-title">Xaomi Note 14</h3>
+                <h4 class="cart-price">$400.00</h4>
+                <h5 class="card-icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </h5>
+                <div class="add-cart">
+                    <input type="checkbox" name="add-card" id="acart">
+                    <label for="acart">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Latest blog -->
+    <div class="blog">
+        <h2>Latest Blog</h2>
+        <p>
+            Countrary to popular belief, Lorem Ipsum is not <br>
+            simply random.
+        </p>
+        <div class="blog-cart">
+            <div class="blog-item">
+                <img src="./images/b1.jpg" width="100%" height="43%" alt="">
+                <h3>Udated Featured Release</h3>
+                <hr>
+                <span>2,March,2025 / 99K comment</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing <br>elit.
+                    dantium, dignissimos tempore.Lorem ipsum <br>dolor sit amet consectetur adipisicing elit.</p>
+                <a href="">Read More...</a>
+            </div>
+            <div class="blog-item">
+                <img src="./images/b2.jpeg" width="100%" height="43%" alt="">
+                <h3>New Feature 2023</h3>
+                <hr>
+                <span>23,March,2023 / 128K comment</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing <br>elit.
+                    dantium, dignissimos tempore.Lorem ipsum <br>dolor sit amet consectetur adipisicing elit.</p>
+                <a href="">Read More...</a>
+            </div>
+            <div class="blog-item">
+                <img src="./images/b3.jpg" width="100%" height="43%" alt="">
+                <h3>International Stock</h3>
+                <hr>
+                <span>2,March,2025 / 73K comment</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing <br>elit.
+                    dantium, dignissimos tempore.Lorem ipsum <br>dolor sit amet consectetur adipisicing elit.</p>
+                <a href="">Read More...</a>
+            </div>
+        </div>
+        <hr class="bottom-bar">
+    </div>
+
+     <!-- Contact Us -->
+     <div class="contact-us">
+        <h2 align="center">Contact Us</h2>
+        <div class="contact">
+            <div class="contact-info">
+                <div class="info">
+                    <span class="contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </span>
+                    <span class="contact-text">
+                        <h3>Location:</h3>
+                        <p>
+                            34, Kyaukthai, Panglong
+                        </p>
+                    </span>
+                </div>
+                <div class="info">
+                    <span class="contact-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </span>
+                    <span class="contact-text">
+                        <h3>Open Hour:</h3>
+                        <p>
+                            8:00 AM - 5:00 PM
+                        </p>
+                    </span>
+                </div>
+                <div class="info">
+                    <span class="contact-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    <span class="contact-text">
+                        <h3>Email:</h3>
+                        <p>
+                            ishopmobile@gmail.com
+                        </p>
+                    </span>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="massage">Massage</label>
+                        <textarea name="massage" id="massage"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="footer">
+        <div class="footers">
+            <div class="footer-item">
+                <h2><i class="fa-solid fa-mobile-button"></i> About Us</h2>
+                <p>Lorem ipsum, dolor sit amet
+                    consectetur adipisicing elit. Nam vel debitis facere, voluptatum beatae ipsum nemo consequa turearum
+                    esse repellendus iure, doloribus rem tenetur optio minima neque facilis, accusantium quasi?</p>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-solid fa-link"></i></a>
+                <a href=""><i class="fa-brands fa-telegram"></i></a>
+            </div>
+            <div class="footer-link">
+                <h2>Quick Link</h2>
+                <a href="">Update</a> <br>
+                <a href="">About Us</a> <br>
+                <a href="">Contact Us</a> <br>
+                <a href="">FAQs</a> <br>
+                <a href="">Vendors</a> <br>
+            </div>
+            <div class="footer-link">
+                <h2>Information</h2>
+                <a href="">Online store</a> <br>
+                <a href="">Privacy Policy</a> <br>
+                <a href="">Refund Policy</a> <br>
+                <a href="">Shoping Policy</a> <br>
+                <a href="">Teams of Services</a> <br>
+            </div>
+            <div class="footer-link">
+                <h2>Services</h2>
+                <a href="">Review</a> <br>
+                <a href="">Positive Dog Training</a> <br>
+                <a href="">Veterinary Services</a> <br>
+                <a href="">Insurance</a> <br>
+                <a href="">Advanced</a> <br>
+            </div>
+        </div>
+        <hr>
+        <div class="last-footer">
+            <p>&copy;CopyRight By <span> Mobile Shop</span> All Right Reversed.<br> DesignBy - <span>Than Bwe</span></p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
