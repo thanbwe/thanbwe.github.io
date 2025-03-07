@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digit Clock</title>
+</head>
+<body>
+    <h1>Digit Clock</h1>
+    <p id="hour"></p>
+
+    <script>
+        setInterval(timeInterval, 1000);
+        function timeInterval() {
+            let time = document.getElementById('hour');
+            let date = new Date();
+            let hour = date.getHours().toString().padStart(2, "0");
+            let minute = date.getMinutes().toString().padStart(2, "0");
+            let second = date.getSeconds().toString().padStart(2, "0");
+
+            if (hour >= 12 )  {
+                time.innerHTML = hour+" : " +minute +" : "+second+" PM";
+            }else {
+                time.innerHTML = hour+" : " +minute +" : "+second+" AM";
+            }
+
+            // time.innerHTML = hour+" : " +minute +" : "+second;
+
+            
+        }
+    </script>
+</body>
+</html>
