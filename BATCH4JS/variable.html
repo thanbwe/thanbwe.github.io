@@ -7,8 +7,32 @@
 </head>
 <body>
     <h1>Variable</h1>
+    <h3>Three Types Of Variable</h3>
+    <ol>
+        <li>var</li>
+        <li>let</li>
+        <li>const</li>
+    </ol>
+
     <script>
-        
+
+        var name = 'Kyaw Zin Aung'; // var is global variable / ကြိုက်နေရာခေါ်လို့ရတယ်လို့ရတယ်။
+        // document.write(name + '<br>'); // ထပ် ကြေငြာလို့လည်း ရ / ပြင်လို့လည်း ရတယ်။
+        name = 'Kyaw Zin Aung Update';
+        document.write(name + '<br>');
+        document.write('<br>');
+
+        let fatherName = 'U Maung Nyo';// Block scope variable
+        // document.write(fatherName + '<br>'); // ထပ် ကြေငြာလို့ မရ / အစားထိုး သို့မဟုတ် ပြင်လို့လည်း ရတယ်။
+        fatherName = 'U Maung Nyo Update';
+        document.write(fatherName + '<br>');
+        document.write('<br>');
+
+        const motherName = 'Daw Khin Ohn'; // const variable
+        document.write(motherName + '<br>'); // ထပ် ကြေငြာလို့ မရ / အစားထိုး သို့မဟုတ်  ပြင်လို့လည်း မရ ။
+        // motherName = "update";
+        // document.write(motherName);
+
     </script>
 </body>
 </html>
