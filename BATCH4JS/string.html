@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string</title>
+</head>
+<body>
+    <h1>String Data Type</h1>
+    <ol>
+        <li>""</li>
+        <li>''</li>
+        <li>`` ထဲကြေငြာလို့ရ။</li>
+    </ol>
+
+    <hr>
+
+    <script>
+        function lineBreak() {
+            document.write('<br>');
+        }
+
+        let firstName = 'Developer';
+        let lastName = 'Kyaw Zin Aung';
+        console.log(firstName,lastName);
+        // စာလုံးအရေအတွက် သိချင်ရင်
+        console.log(lastName.length);
+
+        let fullame = firstName + ' ' + lastName;
+        console.log('My name is ' + fullame);
+        document.write(firstName + `<b> ${lastName.toUpperCase()} </b> <br>`);
+        document.write(`My name is ${fullame}. I am 29 years old.<br>`);
+        document.write(firstName.toUpperCase());
+        document.write('<br>');
+
+        // စာလုံးဖြတ်တာ substr(start , end)
+        document.write(fullame.substr(10,4));
+        lineBreak();
+
+        // delete Space in string
+        let myJob = '   Senior        Developer   ';
+        document.write(myJob.trim());
+        lineBreak();
+        
+        // look-for words in string // is စာလုံးရှာတာ
+        let sem = 'JavaScript is funny';
+        document.write(sem.search('is'));
+        lineBreak();
+
+        let rep = 'I want to visit Mandalay';
+        document.write(rep.replace('Mandalay', 'Yangon'));
+    </script>
+</body>
+</html>
