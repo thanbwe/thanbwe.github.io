@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Type</title>
+</head>
+<body>
+    <h1>Data Type</h1>
+
+    <ol>
+        <li>String</li>
+        <li>Number</li>
+        <li>Boolen</li>
+        <li>Null</li>
+        <li>Underfined</li>
+        <li>Array</li>
+        <li>Objects</li>
+    </ol>
+    <script>
+        // Data Type
+        var name = 'Kyaw Zin Aung'; // String
+        console.log(name);
+        // show type
+        console.log(typeof(name));
+
+        var num = 1 + 2; // Number
+        console.log(num);
+
+        var name = true; // Boolen
+        console.log(name);
+
+        var age; // Underfined
+        console.log(age);
+
+        var color = null; // Null 
+        console.log(color);
+
+        let arr = new Array('a', 'b', 'c', 'd'); // Array
+        console.log(typeof(arr));
+        console.log(arr[0]);
+        console.log(arr[1]);
+        console.log(arr[2]);
+        console.log(arr[3]);
+        
+        let array = ['apple', 'Pileapple', 'orange', ['banana','mango']];
+        console.log(array);
+        console.log(array[3][0]);
+        
+        // Key , value
+        let CarInfo = {
+            carName : 'Honda Fix',
+            color : ['white', 'black', 'blue'],
+            number : 'BM-121421',
+            model : '233252'
+        }
+        console.log(CarInfo.color[1]);
+        
+    </script>
+</body>
+</html>
