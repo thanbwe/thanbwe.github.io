@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condition</title>
+</head>
+<body>
+    <h1>If Condition</h1>
+    <p>if (condition) {
+        code
+    } <br>
+    condition မှန်မှ code က အလုပ်လုပ်မှာပါ။
+    </p>
+
+    <script>
+        if (true) {
+            // code
+        }
+
+        let number = prompt('Enter a number');
+        // document.write(number);
+
+        if (number < 100)  {
+            document.write('Number is less than 100');
+            document.write('<br>');
+            let num = prompt ('Enter a number');
+            if (num %2 == 0) {
+                document.write('This is even number'); 
+            }else {
+                document.write('This is odd number'); 
+            }
+        }else if (number > 100) {
+            document.write('number is greater than 100');
+            document.write('<br>');
+            let num = prompt ('Enter a number');
+            if (num %2 == 0) {
+                document.write('This is even number'); 
+            }else {
+                document.write('This is odd number'); 
+            }
+        }
+    </script>
+</body>
+</html>
