@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+<body>
+    <h1>Array Lessons</h1>
+
+    <script>
+        function lineBreak() {
+            document.write(`<br>`);
+        }
+        // see array class
+        let arr = ['a', 'b', 'c'];
+        document.write(arr.length); // Number of array length
+        lineBreak();
+
+        let fruits = ['Apple', 'Orange', 'Mango', 'Strawberry'];
+        document.write(fruits.length);
+        lineBreak();
+
+        //Array နောက်ဆုံးခန်းကနေထည့်တာ push
+        fruits.push('Banana');
+        console.log(fruits);
+        //ဖြတ်တာ
+        fruits.pop();
+        console.log(fruits);
+        
+
+        //Array ရှေ့ရှေ့ဆုံးခန်းကနေထည့်တာ Unshift
+        fruits.unshift('Banana', 'cherry');
+        console.log(fruits);
+        //ဖြတ်တာ
+        fruits.shift();
+        console.log(fruits);
+
+
+
+    </script>
+</body>
+</html>
