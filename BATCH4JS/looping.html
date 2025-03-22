@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>looping</title>
+</head>
+<body>
+    
+    <script>
+    //  For looping
+    // for( let initialize, condition, update) {
+    //     code
+    // }
+    let i = 5;
+    for (let i=5; i < 10 ; i++) {
+        document.write(`Hello <br>`);
+    }
+
+    let laptopList = ['Dell', 'Levono', 'Asus', 'Hp', 'Mac'];
+    for(let i=0; i<laptopList.length; i++) {
+        document.write(laptopList[i]+'<br>');
+    }
+
+    for (let k=1; k<=12; k++) {
+        document.write(`<p>13 x ${k} = ${13 * k}</p>`)
+    }
+
+   
+
+    let num = Number(prompt('Enter a Number : '));
+    document.write(`<h1>HomeWork</h1>`);
+    for (let k=1; k<=12; k++) {
+        document.write(`<p>${num} x ${k} = ${num * k}</p>`)
+    }
+    
+    // *
+    // **
+    // ***
+    // ****
+    // *****
+
+    // for (let h = 0; h < 5; h++) {
+    //     for (let m = 0; m <= h; m++) {
+    //         document.write('*');
+    //     }
+    //     document.write('<br>');
+    // }
+
+    // ******
+    // *****
+    // ****
+    // ***
+    // **
+    // *
+    for (let h = 0; h <= 5; h++) {
+
+        for (let m = 5; m >= h; m--) {
+            document.write('*');
+        }
+
+        document.write('<br>');
+    }
+
+
+
+    for (let h = 0; h < 5; h++) {
+        
+        for (let m = 5; m > h; m--) {
+            // document.write(' ');
+            document.write(' *');
+        }
+
+        document.write('<br>');
+    }
+
+
+    let number = Number(prompt('Enter A Number : '));
+    while (number < 100) {
+        document.write(`Your Number is ${number} <br>`);
+        number++;
+    }
+
+    let no = 190;
+    do {
+        document.write(`Number ${no}`);
+        no += 2;
+    } while (no < 30);
+    
+    </script>
+
+    
+</body>
+</html>
