@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+
+    <h1>Hello jQuery</h1>
+    <button id="click">Click</button>
+
+    <br><br><br>
+
+    <img src="./images.jpg" alt=""> <br>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    
+    <!-- CDN content delivery network -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script> -->
+
+    <!-- Local Installation -->
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <script>
+        // jQuery(selector).action()
+
+        // $('#click').click(function () {
+        //     alert('Hello is Funny.');
+        // })
+
+        // $(document).ready(function() {
+        //     $('#click').click(function() {
+        //         $('h1').hide(function() {
+        //             alert('Hided h1.');
+        //         })
+        //     })
+        // })
+
+        $(document).ready(function() {
+
+            $('#hide').click(function() {
+                $('img').hide();
+            })
+
+            $('#show').click(function() {
+                $('img').show();
+            })
+        })
+
+       
+
+    </script>
+
+</body>
+</html>
