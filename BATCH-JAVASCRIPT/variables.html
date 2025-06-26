@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>varables</title>
+</head>
+
+<body>
+    <h1>Hello! JS Variables</h1>
+    <ol>
+        <li>Variables</li>
+        <li>
+            <h3>Variable Keywords</h3>
+            <ol>
+                <li>var</li>
+                <li>let</li>
+                <li>const</li>
+            </ol>
+        </li>
+        <li>
+            <h3>Rule of variables</h3>
+            <ol>
+                <li>Use Camelcase</li>
+            </ol>
+        </li>
+    </ol>
+
+    <script>
+        var name = 'Kyaw Zin Aung' // Global vvaribles
+        console.log(name);
+        var name = 'Kyaw Zin Aung Update' // Update name
+        console.log(name);
+
+
+        let fatherName = 'U Maung Nyo'
+        console.log(fatherName);
+        fatherName = 'U Maung Nyo Update' // use modifily
+        console.log(fatherName);
+        // let fatherName = 'U Maung Nyo Update' // Not asign
+        // console.log(fatherName);
+
+        const motherName = 'Daw Khin Ohn'
+        console.log(motherName);
+        // motherName = 'Daw Khin Ohn update' // Not modifily
+        // console.log(motherName);
+        // const motherName = 'Daw Khin Ohn' // not make asign
+        // console.log(motherName);
+
+        // Declare a variable using 'let' (can be reassigned)
+        let greeting = "Hello, World!";
+        document.write(greeting)
+
+        // Declare a constant using 'const' (cannot be reassigned after initial assignment)
+        const PI = 3.14159;
+
+        // Declare a variable using 'var' (older way, has broader scope)
+        var age = 30;
+
+        // Different data types
+        let isStudent = true;        // Boolean
+        let score = 100;             // Number (integer)
+        let temperature = 25.5;      // Number (float)
+        let userName = "Alice";      // String
+        let emptyValue = null;       // Null (intentional absence of any object value)
+        let undefinedValue;          // Undefined (variable declared but no value assigned)
+
+        // An Array (ordered list of values)
+        let colors = ["red", "green", "blue"];
+        for (let i = 0; i < colors.length; i++) {
+            console.log(colors[i]);
+        }
+
+
+        // An Object (collection of key-value pairs)
+        let person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 25
+        };
+
+        // Reassigning a 'let' variable
+        greeting = "Hi there!";
+
+        // Trying to reassign a 'const' variable will cause an error
+        // PI = 3.14; // This line would throw a TypeError: Assignment to constant variable.
+
+        // Outputting values to the console for debugging
+        console.log(greeting);
+        console.log(PI);
+        console.log(age);
+        console.log(isStudent);
+        console.log(score);
+        console.log(temperature);
+        console.log(userName);
+        console.log(emptyValue);
+        console.log(undefinedValue);
+        console.log(colors);
+        console.log(person);
+
+        let isOver18 = true;
+        console.log(isOver18);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<h4>Operators are symbols that perform operations on values and variables.</h4>
+<script>
+    let x = 10;
+    let y = 5;
+
+    // Arithmetic Operators
+    let sum = x + y;       // Addition
+    let difference = x - y;  // Subtraction
+    let product = x * y;     // Multiplication
+    let quotient = x / y;    // Division
+    let remainder = x % 3;   // Modulus (remainder of division)
+    let exponent = x ** 2;   // Exponentiation (x to the power of 2)
+
+    console.log("Sum:", sum);
+    console.log("Difference:", difference);
+    console.log("Product:", product);
+    console.log("Quotient:", quotient);
+    console.log("Remainder:", remainder);
+    console.log("Exponent:", exponent);
+
+    // Assignment Operators
+    let a = 10;
+    a += 5;    // Equivalent to: a = a + 5; (a is now 15)
+    a -= 3;    // Equivalent to: a = a - 3; (a is now 12)
+    a *= 2;    // Equivalent to: a = a * 2; (a is now 24)
+    a /= 4;    // Equivalent to: a = a / 4; (a is now 6)
+
+    console.log("a after assignments:", a);
+
+    // Comparison Operators (return true or false)
+    let isEqual = (x == y);     // Loose equality (checks value, type coercion)
+    let isStrictlyEqual = (x === y); // Strict equality (checks value AND type)
+    let isNotEqual = (x != y);  // Loose inequality
+    let isStrictlyNotEqual = (x !== y); // Strict inequality
+    let isGreater = (x > y);
+    let isLess = (x < y);
+    let isGreaterOrEqual = (x >= y);
+    let isLessOrEqual = (x <= y);
+
+    console.log("x == y:", isEqual);
+    console.log("x === y:", isStrictlyEqual);
+    console.log("x != y:", isNotEqual);
+    console.log("x !== y:", isStrictlyNotEqual);
+    console.log("x > y:", isGreater);
+    console.log("x < y:", isLess);
+    console.log("x >= y:", isGreaterOrEqual);
+    console.log("x <= y:", isLessOrEqual);
+
+    // Logical Operators
+    let isRaining = true;
+    let hasUmbrella = false;
+
+    let canGoOutside = isRaining && hasUmbrella; // AND (true if both are true)
+    let needsJacket = isRaining || hasUmbrella;  // OR (true if at least one is true)
+    let notRaining = !isRaining;                 // NOT (inverts boolean value)
+
+    console.log("Can go outside (raining AND umbrella):", canGoOutside);
+    console.log("Needs jacket (raining OR umbrella):", needsJacket);
+    console.log("Not raining:", notRaining);
+</script>

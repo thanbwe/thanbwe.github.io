@@ -1,0 +1,26 @@
+<h4>Loops are used to execute a block of code repeatedly.</h4>
+<script>
+    // For loop: repeats a block of code a specific number of times
+    for (let i = 0; i < 5; i++) {
+        console.log("For loop iteration:", i);
+    }
+
+    // While loop: repeats a block of code as long as a condition is true
+    let count = 0;
+    while (count < 3) {
+        console.log("While loop iteration:", count);
+        count++; // Increment count to eventually make the condition false
+    }
+
+    // Looping through an Array
+    let fruits = ["Apple", "Banana", "Cherry"];
+    for (let j = 0; j < fruits.length; j++) {
+        console.log("Fruit:", fruits[j]);
+    }
+
+    // For...of loop (modern way to iterate over iterable objects like arrays)
+    for (const fruit of fruits) {
+        console.log("Fruit (for...of):", fruit);
+    }
+
+</script>

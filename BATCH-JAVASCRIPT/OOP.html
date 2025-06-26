@@ -1,0 +1,299 @@
+<script>
+    // 1. Object Literal - simplest way to create an object
+    const car1 = {
+        make: "Honda",
+        model: "Civic",
+        year: 2020,
+        start: function () {
+            console.log("Engine started for " + this.make + " " + this.model);
+        },
+        stop: function () {
+            console.log("Engine stopped.");
+        }
+    };
+
+    console.log(car1.make);   // Accessing a property
+    car1.start();             // Calling a method
+
+    // 2. Understanding Prototypes
+    // Every object in JavaScript has a prototype (which is also an object or null)
+    // You can access it via Object.getPrototypeOf() or __proto__ (deprecated, but often used for demonstration)
+    const proto = Object.getPrototypeOf(car1);
+    console.log(proto); // Shows the default Object prototype
+
+    // Adding a property directly to an object
+    car1.color = "blue";
+    console.log(car1.color);
+
+    // Adding a method to the prototype of an object (not common with object literals)
+    // This is more relevant for objects created from constructor functions/classes
+    // For now, understand that methods like .toString() come from the prototype chain
+    console.log(car1.toString()); // toString() method comes from Object.prototype
+
+    // Constructor Function
+    function Car(make, model, year) {
+        this.make = make;    // Properties specific to each instance
+        this.model = model;
+        this.year = year;
+        // Avoid putting methods here if they are shared, as each instance gets its own copy
+        // this.start = function() { console.log("Engine started!"); };
+    }
+
+    // Adding methods to the prototype for shared behavior
+    // This ensures methods are shared efficiently and not duplicated for every instance
+    Car.prototype.start = function () {
+        console.log(this.make + " " + this.model + " engine started.");
+    };
+
+    Car.prototype.stop = function () {
+        console.log("Engine stopped.");
+    };
+
+    // Creating instances (objects) using the constructor function
+    const car2 = new Car("Ford", "Focus", 2018);
+    const car3 = new Car("Toyota", "Camry", 2022);
+
+    console.log(car2.make); // Access property
+    car2.start();           // Call method
+
+    console.log(car3.model);
+    car3.stop();
+
+    // Verify that methods are shared via prototype
+    console.log(car2.start === car3.start); // Output: true
+
+    // Class Declaration
+    class Bicycle {
+        // The constructor method is called automatically when a new object is created
+        constructor(brand, gears) {
+            this.brand = brand;
+            this.gears = gears;
+        }
+
+        // Class method (automatically added to the prototype)
+        ride() {
+            console.log(`Riding the ${this.brand} bicycle with ${this.gears} gears.`);
+        }
+
+        // Another method
+        changeGears(newGears) {
+            this.gears = newGears;
+            console.log(`Gears changed to ${this.gears}.`);
+        }
+
+        // Static method (belongs to the class itself, not instances)
+        static describe() {
+            console.log("Bicycle is a two-wheeled vehicle driven by pedals.");
+        }
+    }
+
+    // Creating instances from the class
+    const myBike = new Bicycle("Trek", 21);
+    const cityBike = new Bicycle("Schwinn", 7);
+
+    myBike.ride();             // Call instance method
+    cityBike.changeGears(8);   // Call instance method
+
+    // Call static method directly on the class
+    Bicycle.describe();
+
+    // You cannot call instance methods on the class itself
+    // Bicycle.ride(); // This would throw an error
+
+    // Parent Class (Superclass)
+    class Vehicle {
+        constructor(type, wheels) {
+            this.type = type;
+            this.wheels = wheels;
+        }
+
+        drive() {
+            console.log(`The ${this.type} is moving on ${this.wheels} wheels.`);
+        }
+
+        stop() {
+            console.log(`The ${this.type} has stopped.`);
+        }
+    }
+
+    // Child Class (Subclass) - inherits from Vehicle
+    // class Car extends Vehicle {
+    //     constructor(make, model, wheels, hasTrunk) {
+    //         // Call the parent class's constructor using 'super()'
+    //         super("car", wheels); // 'type' is fixed as "car", 'wheels' passed up
+    //         this.make = make;
+    //         this.model = model;
+    //         this.hasTrunk = hasTrunk;
+    //     }
+
+    //     // New method specific to Car class
+    //     openTrunk() {
+    //         if (this.hasTrunk) {
+    //             console.log(this.make + " " + this.model + "'s trunk is open.");
+    //         } else {
+    //             console.log(this.make + " " + this.model + " does not have a trunk.");
+    //         }
+    //     }
+
+    //     // Method overriding: redefining an inherited method
+    //     drive() {
+    //         console.log(`Driving the ${this.make} ${this.model} at speed!`);
+    //     }
+    // }
+
+    // Another Child Class - inherits from Vehicle
+    class Motorcycle extends Vehicle {
+        constructor(make, model) {
+            super("motorcycle", 2); // Motorcycles always have 2 wheels
+            this.make = make;
+            this.model = model;
+        }
+
+        // New method specific to Motorcycle
+        wheelie() {
+            console.log("Doing a wheelie!");
+        }
+    }
+
+    const myVehicle = new Vehicle("truck", 6);
+    myVehicle.drive();
+
+    // const myCar = new Car("Tesla", "Model 3", 4, true);
+    // myCar.drive();      // Calls the overridden drive method in Car
+    // myCar.openTrunk();
+    // myCar.stop();       // Inherited from Vehicle
+
+    const myMotorcycle = new Motorcycle("Harley", "Fat Boy");
+    myMotorcycle.drive(); // Inherited from Vehicle
+    myMotorcycle.wheelie();
+
+    // Using Naming Convention (a common pattern, but not truly private)
+    class BankAccountLegacy {
+        constructor(owner, initialBalance) {
+            this.owner = owner;
+            this._balance = initialBalance; // Convention: _ indicates it should be treated as private
+        }
+
+        deposit(amount) {
+            if (amount > 0) {
+                this._balance += amount;
+                console.log(`Deposited ${amount}. New balance: ${this._balance}`);
+            } else {
+                console.log("Deposit amount must be positive.");
+            }
+        }
+
+        withdraw(amount) {
+            if (amount > 0 && amount <= this._balance) {
+                this._balance -= amount;
+                console.log(`Withdrew ${amount}. New balance: ${this._balance}`);
+            } else {
+                console.log("Invalid withdrawal amount or insufficient funds.");
+            }
+        }
+
+        getBalance() {
+            return this._balance; // Provides controlled access
+        }
+    }
+
+    const account1 = new BankAccountLegacy("Jane Doe", 500);
+    account1.deposit(100);
+    console.log("Current balance (via getter):", account1.getBalance());
+
+    // Warning: You can still directly access/modify _balance, violating encapsulation
+    account1._balance = -1000; // This is possible but discouraged by convention
+    console.log("Balance after direct modification (discouraged):", account1.getBalance());
+
+    // Using Modern Private Class Fields (#) - truly private
+    class BankAccount {
+        #owner;         // Private field
+        #balance;       // Private field
+
+        constructor(owner, initialBalance) {
+            this.#owner = owner;
+            this.#balance = initialBalance;
+        }
+
+        // Public method to interact with the private balance
+        deposit(amount) {
+            if (amount > 0) {
+                this.#balance += amount;
+                console.log(`Deposited ${amount}. New balance: ${this.#balance}`);
+            } else {
+                console.log("Deposit amount must be positive.");
+            }
+        }
+
+        // Public method to interact with the private balance
+        withdraw(amount) {
+            if (amount > 0 && amount <= this.#balance) {
+                this.#balance -= amount;
+                console.log(`Withdrew ${amount}. New balance: ${this.#balance}`);
+            } else {
+                console.log("Invalid withdrawal amount or insufficient funds.");
+            }
+        }
+
+        // Getter method to provide controlled read access to private balance
+        getBalance() {
+            return this.#balance;
+        }
+
+        // Public method to access owner (which is also private here)
+        getOwner() {
+            return this.#owner;
+        }
+
+        // Attempting to directly access #balance from outside will cause an error
+        // console.log(account2.#balance); // SyntaxError: Private field '#balance' must be declared in an enclosing class
+    }
+
+    const account2 = new BankAccount("John Smith", 1000);
+    account2.deposit(200);
+    console.log("Current balance (via getter):", account2.getBalance());
+    // account2.#balance = 50; // This line would cause a SyntaxError (true privacy)
+
+    // Parent Class
+    class Animal {
+        makeSound() {
+            console.log("Animal makes a sound.");
+        }
+    }
+
+    // Child Class 1
+    class Dog extends Animal {
+        // Overrides the makeSound method from Animal
+        makeSound() {
+            console.log("Woof!");
+        }
+    }
+
+    // Child Class 2
+    class Cat extends Animal {
+        // Overrides the makeSound method from Animal
+        makeSound() {
+            console.log("Meow!");
+        }
+    }
+
+    // Child Class 3 (does not override, uses parent's method)
+    class Bird extends Animal {
+        // No makeSound method defined here, so it inherits Animal's makeSound
+    }
+
+    // Function that takes an Animal object (or any object that inherits from Animal)
+    function performSound(animal) {
+        animal.makeSound(); // This will call the specific makeSound method for each animal type
+    }
+
+    const genericAnimal = new Animal();
+    const myDog = new Dog();
+    const myCat = new Cat();
+    const myBird = new Bird();
+
+    performSound(genericAnimal); // Output: Animal makes a sound.
+    performSound(myDog);         // Output: Woof! (Dog's specific implementation)
+    performSound(myCat);         // Output: Meow! (Cat's specific implementation)
+    performSound(myBird);        // Output: Animal makes a sound. (Inherited from Animal)
+</script>

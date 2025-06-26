@@ -1,0 +1,27 @@
+<h4>Conditional statements allow your code to make decisions and execute different blocks of code based on certain
+    conditions.</h4>
+
+<script>
+    let temperature = 8;
+
+    if (temperature > 30) {
+        console.log("It's a hot day!");
+    } else if (temperature > 20) {
+        console.log("It's a pleasant warm day.");
+    } else if (temperature > 10) {
+        console.log("It's a cool day.");
+    } else {
+        console.log("It's cold!");
+    }
+
+    let isAdmin = false;
+    let userLoggedIn = false;
+
+    if (isAdmin && userLoggedIn) {
+        console.log("Welcome, Admin!");
+    } else if (userLoggedIn) {
+        console.log("Welcome, User!");
+    } else {
+        console.log("Please log in to continue.");
+    }
+</script>

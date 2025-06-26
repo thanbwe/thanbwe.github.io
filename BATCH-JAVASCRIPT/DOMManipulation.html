@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Document Object Model (DOM) Manipulation</h1>
+    <h1 id="main-title">Hello, DOM Manipulation!</h1>
+    <p class="intro-text">This is a paragraph.</p>
+    <button id="change-text-button">Change Title</button>
+    <button id="add-highlight-button">Highlight Paragraph</button>
+    <button id="toggle-list-button">Toggle List</button>
+
+    <ul id="my-list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <script>
+        // Get elements by ID
+        const titleElement = document.getElementById('main-title');
+        const changeTextButton = document.getElementById('change-text-button');
+        const addHighlightButton = document.getElementById('add-highlight-button');
+        const toggleListButton = document.getElementById('toggle-list-button');
+        const myList = document.getElementById('my-list');
+
+        // Get elements by class name (returns an HTMLCollection, like an array)
+        const introParagraphs = document.getElementsByClassName('intro-text');
+        const introParagraph = introParagraphs[0]; // Get the first paragraph with this class
+
+        // Change text content
+        titleElement.textContent = "DOM Power!";
+
+        // Add an event listener to a button
+        changeTextButton.addEventListener('click', function() {
+            titleElement.textContent = "Title Changed by Click!";
+            titleElement.style.color = "blue"; // Change style directly
+        });
+
+        addHighlightButton.addEventListener('click', function() {
+            // Toggle a CSS class
+            introParagraph.classList.toggle('highlight');
+        });
+
+        // Toggle list visibility
+        let isListVisible = true;
+        toggleListButton.addEventListener('click', function() {
+            if (isListVisible) {
+                myList.style.display = 'none'; // Hide the list
+                toggleListButton.textContent = 'Show List';
+            } else {
+                myList.style.display = 'block'; // Show the list
+                toggleListButton.textContent = 'Hide List';
+            }
+            isListVisible = !isListVisible; // Invert the state
+        });
+
+        // Create a new element and add it to the body
+        const newParagraph = document.createElement('p');
+        newParagraph.textContent = "This paragraph was added by JavaScript!";
+        document.body.appendChild(newParagraph);
+    </script>
+</body>
+</html>
